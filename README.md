@@ -28,7 +28,7 @@ Check out the live demo here: [**View Live Site**](https://mostafa-kermaninia.gi
 
 1. **Clone the repository**
 ```bash
-   git clone [https://github.com/mostafa-kermaninia/Valentine-Website.git](https://github.com/mostafa-kermaninia/Valentine-Website.git)
+   git clone https://github.com/mostafa-kermaninia/Valentine-Website.git
 ```
 
 2. **Navigate to project directory**
