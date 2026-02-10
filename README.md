@@ -27,10 +27,9 @@ Check out the live demo here: [**View Live Site**](https://mostafa-kermaninia.gi
 ## 📦 Installation & Usage
 
 1. **Clone the repository**
-   ```bash
+```bash
    git clone [https://github.com/mostafa-kermaninia/Valentine-Website.git](https://github.com/mostafa-kermaninia/Valentine-Website.git)
-
-   ```
+```
 
 2. **Navigate to project directory**
 ```bash
@@ -73,6 +72,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ---
 
 Made with ❤️ by [Mostafa Kermaninia](https://github.com/mostafa-kermaninia)
-
-```
 
