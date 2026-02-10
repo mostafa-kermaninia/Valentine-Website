@@ -5,7 +5,8 @@ import FloatingHearts from "@/components/FloatingHearts";
 import Celebration from "@/components/Celebration";
 import useNoButtonDodge from "@/hooks/useNoButtonDodge";
 import valentineBg from "@/assets/valentine-bg.jpg";
-import createRomanticMusic from "@/lib/romanticMusic";
+// import createRomanticMusic from "@/lib/romanticMusic";
+import loveSong from "@/assets/song.mp3";
 
 const romanticText = `Every moment with you feels like a beautiful dream I never want to wake up from. You are the reason my heart beats with purpose, the melody in every silence, and the warmth in every cold night. In a world full of ordinary, you are my extraordinary. My love for you is not just a feeling — it's a universe, ever-expanding, infinite, and breathtakingly beautiful.`;
 
@@ -13,12 +14,18 @@ const Index = () => {
   const [phase, setPhase] = useState<"text" | "card" | "question" | "celebration">("text");
   const [displayedText, setDisplayedText] = useState("");
   const [cardOpen, setCardOpen] = useState(false);
-  const musicRef = useRef<ReturnType<typeof createRomanticMusic> | null>(null);
+  // const musicRef = useRef<ReturnType<typeof createRomanticMusic> | null>(null);
+  const musicRef = useRef<HTMLAudioElement | null>(null);
   const { noPosition, noScale, handleNoHover } = useNoButtonDodge();
 
   // Cleanup music on unmount
   useEffect(() => {
-    return () => { musicRef.current?.stop(); };
+    return () => {
+      if (musicRef.current) {
+        musicRef.current.pause();
+        musicRef.current.currentTime = 0;
+      }
+    };
   }, []);
 
   // Typewriter effect
@@ -45,11 +52,13 @@ const Index = () => {
 
   const handleOpenCard = () => {
     setCardOpen(true);
-    // Start romantic music on user interaction (allowed by browsers)
+// Start romantic music
     if (!musicRef.current) {
-      musicRef.current = createRomanticMusic();
+      musicRef.current = new Audio(loveSong);
+      musicRef.current.loop = true; // اگر می‌خواهی آهنگ تکرار شود این خط بماند
+      musicRef.current.volume = 0.5; // تنظیم بلندی صدا (بین 0 تا 1)
     }
-    musicRef.current.play();
+    musicRef.current.play().catch(e => console.log("Playback failed:", e));
     toast("🎵 Can you hear the music of love? 🎶", {
       className: "valentine-toast",
       duration: 3000,
