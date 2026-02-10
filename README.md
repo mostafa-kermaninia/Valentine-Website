@@ -2,7 +2,9 @@
 
 A beautiful, interactive, and romantic website template built with React, TypeScript, and Tailwind CSS. Perfect for surprising your loved ones!
 
-![Project Preview](public/placeholder.png) ## ✨ Features
+![Project Preview](public/placeholder.png)
+
+## ✨ Features
 
 - **💌 Interactive Envelope:** A smooth opening animation for the love letter.
 - **🎵 Romantic Music:** Auto-plays custom romantic background music.
@@ -28,7 +30,7 @@ Check out the live demo here: [**View Live Site**](https://mostafa-kermaninia.gi
    ```bash
    git clone [https://github.com/mostafa-kermaninia/Valentine-Website.git](https://github.com/mostafa-kermaninia/Valentine-Website.git)
 
-```
+   ```
 
 2. **Navigate to project directory**
 ```bash
