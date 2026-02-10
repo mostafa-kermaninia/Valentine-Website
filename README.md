@@ -2,7 +2,7 @@
 
 A beautiful, interactive, and romantic website template built with React, TypeScript, and Tailwind CSS. Perfect for surprising your loved ones!
 
-![Project Preview](public/placeholder.svg) ## ✨ Features
+![Project Preview](public/placeholder.png) ## ✨ Features
 
 - **💌 Interactive Envelope:** A smooth opening animation for the love letter.
 - **🎵 Romantic Music:** Auto-plays custom romantic background music.
